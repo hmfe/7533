@@ -1,0 +1,175 @@
+.search {
+  background: #f5f5f5;
+  max-width: 600px;
+
+  padding: 6px;
+  box-sizing: border-box;
+
+  font-family: 'Arial', sans-serif;
+}
+
+.search__input {
+  width: 100%;
+  padding: 12px 10px;
+  box-sizing: border-box;
+  
+  font-size: 14px;
+  height: 45px;
+  
+  border: none;
+  border: 2px solid #d8d8d8;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -webkit-border-radius:0px;
+  outline: none;
+}
+
+.search__error {
+  font-size: 12px;
+  color: red;
+}
+
+.dropdown {
+  width: 100%;
+  max-height: 200px;
+  overflow-y: scroll; 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: white;
+  border: 2px solid #d8d8d8;
+}
+
+.dropdown__item,
+.dropdown__item--selected {
+  list-style: none;
+  font-size: 14px;
+  height: 45px;
+  padding: 15px;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  position: relative;
+}
+
+.dropdown__item--selected {
+  background: #83d0f2;
+}
+
+.dropdown__item:hover,
+.dropdown__item--selected:hover {
+  background: #c4edff;
+}
+
+.searchhistory {
+  margin-top: 10px;
+  padding: 10px 20px;
+}
+
+.searchhistory__header {
+  font-size: 14px;
+  margin: 0;
+}
+
+.searchhistory__clear {
+  float:right;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 12px;
+
+  color: gray;
+}
+
+.searchhistory__list {
+  padding: 0;
+  clear:both;
+}
+
+.searchhistory__item {
+  list-style: none;
+  border-bottom: 1px solid #d8d8d8;
+  margin:0;
+  padding:10px;
+  position: relative;
+}
+
+.searchhistory__name {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: normal;
+
+  max-width: 100px;
+  word-wrap: break-word;
+}
+
+.searchhistory__added {
+  float: right;
+  font-size: 10px;
+  margin:0;
+  padding:0;
+  margin-right: 30px;
+
+  color: gray;
+}
+
+.searchhistory__remove {
+  display: block;
+  width: 30px;
+  height: 100%;
+  right: 0;
+  top: 0;
+  position: absolute;
+  text-align: center;
+
+  cursor: pointer;
+}
+
+.searchhistory__remove::after {
+  content:'×';
+  font-size: 24px;
+  display: inline-block;
+  padding-top: 4px;
+
+  color: gray;
+}
+
+@media screen and (min-width: 480px) {
+  .search__input {
+    font-size: 16px;
+  }
+
+  .search__error {
+    font-size: 14px;
+  }
+
+  .dropdown__item,
+  .dropdown__item--selected {
+    font-size: 16px;
+  }
+
+  .searchhistory__header {
+    font-size: 18px;
+  }
+
+  .searchhistory__clear {
+    font-size: 14px;
+  }
+
+  .searchhistory__name {
+    font-size: 16px;
+    max-width: 200px;
+  }
+
+  .searchhistory__added {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .searchhistory__name {
+    max-width: 300px;
+  }
+}
